@@ -149,7 +149,7 @@ Param(
 
             #Decrypt cryptography Key from SecureString
             $BSTR = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($Key)
-            $EncryptionKey = [System.Convert]::FromBase64String([System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR))
+            $EncryptionKey = [System.Convert]::FromBase64String([System.Runtime.InteropServices.Marshal]::PtrToStringBSTR($BSTR))
 
             $Crypto = [System.Security.Cryptography.SymmetricAlgorithm]::Create($Algorithm)
             if($PSBoundParameters.ContainsKey('CipherMode')){
@@ -311,7 +311,7 @@ Param(
 
             #Decrypt cryptography Key from SecureString
             $BSTR = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($Key)
-            $EncryptionKey = [System.Convert]::FromBase64String([System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR))
+            $EncryptionKey = [System.Convert]::FromBase64String([System.Runtime.InteropServices.Marshal]::PtrToStringBSTR($BSTR))
 
             $Crypto = [System.Security.Cryptography.SymmetricAlgorithm]::Create($Algorithm)
             $Crypto.Mode = $CipherMode
