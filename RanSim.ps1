@@ -28,7 +28,7 @@ your simulation, but you also have the option to decrypt the files with the same
 
 # Define parameters and their defaults
 param([string]$Mode,
-      [string]$TargetPath = "~/Desktop/Research/Prueba",
+      [string]$TargetPath = "~/Desktop/Research/Prueba2",
       [string]$Extension = ".encrypted",
       [string]$Key = "Q5KyUru6wn82hlY9k8xUjJOPIC9da41jgRkpt21jo2L="
 )
